@@ -1,0 +1,25 @@
+<!-- Order Food form -->
+<ion-view view-title="Order Food">
+	<ion-content class="padding">
+		<div class="list">
+			<div class="item item-input-inset">
+				<label class="item-input-wrapper">
+					<input type="text" placeholder="anything to save" ng-model="newThing">
+				</label>
+				<button class="button button-clear button-positive icon" ng-click="add(newThing)">
+					<i class="ion-ios-plus-outline"></i> Add
+				</button>
+			</div>
+		</div>
+		<ion-list show-delete="true" can-swipe="true">
+			<ion-item ng-repeat="thing in things track by $index">{{thing}}
+				<!-- <ion-option-button class="button-assertive ion-trash-b" ng-click="remove(thing)">
+				</ion-option-button> -->
+				<!-- <button class="button button-clear button-positive icon" ng-click="remove(thing)">
+					<i class="ion-ios-plus-outline"></i> Remove
+				</button> -->
+				<ion-delete-button class="ion-minus-circled" ng-click="remove(thing)"></ion-delete-button>
+			</ion-item>
+		</ion-list>
+	</ion-content>
+</ion-view>
