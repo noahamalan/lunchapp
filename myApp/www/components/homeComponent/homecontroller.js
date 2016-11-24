@@ -1,5 +1,6 @@
-angular.module('starter.controllers').controller('homeCtrl', function($scope , $http) {
-  console.log("Appearing into the home controller file");
+angular.module('starter.controllers').controller('homeCtrl', function($scope , $http , $firebase) {
+	console.log("Appearing into the home controller file");
+
 })
 
 // Useful links added here 
